@@ -6,13 +6,13 @@ $sql = "SELECT * FROM commandes";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    echo"<h2>Tous les commandes des clients </h2>";
+    echo"<h2>Tous les commandes des utilisateurs </h2>";
     echo "<table border=1>";
-    echo "<tr><th>id</th><th>id client</th><th>date de commande</th><th>moyen de livraison</th><th>modifier</th><th>supprimer</th></tr>";
+    echo "<tr><th>id</th><th>id utilisateur</th><th>date de commande</th><th>moyen de livraison</th><th>modifier</th><th>supprimer</th></tr>";
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . $row['id_commande'] . "</td>";
-        echo "<td>" . $row['id_client'] . "</td>";
+        echo "<td>" . $row['id_utilisateur'] . "</td>";
         echo "<td>" . $row['date_commande'] . "</td>";
         echo "<td>" . $row['moyen_livraison'] . "</td>";
         echo "<td><a href='modifier.php?id_commande=".$row['id_commande']."'>Modifier</a></td>";
