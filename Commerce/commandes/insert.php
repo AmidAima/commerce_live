@@ -2,13 +2,13 @@
 include("../connexion.php");
 
 // Récupération des données du formulaire
-$id_client= $_POST['id_client'];
+$id_utilisateur= $_POST['id_utilisateur'];
 $date_commande= $_POST['date_commande'];
 $moyen_livraison = $_POST['moyen_livraison'];
 
 
 // Insertion des données dans la table produits
-$sql = "INSERT INTO commandes (id_client, date_commande,moyen_livraison) VALUES ('$id_client','$date_commande', '$moyen_livraison')";
+$sql = "INSERT INTO commandes (id_utilisateur, date_commande,moyen_livraison) VALUES ('$id_utilisateur','$date_commande', '$moyen_livraison')";
 
 if (mysqli_query($conn, $sql)) {
     // Message de confirmation
