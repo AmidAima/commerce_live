@@ -7,13 +7,13 @@ if (isset($_GET['id_commande'])) {
     // Vérifier si le formulaire de modification a été soumis
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $date_commande = $_POST['date_commande'];
-        $id_client = $_POST['id_client'];
+        $id_utilisateur = $_POST['id_utilisateur'];
         $moyen_livraison = $_POST['moyen_livraison'];
       
 
   
 
-       $sql = "UPDATE commandes SET  id_client='$id_client', date_commande= '$date_commande', moyen_livraison = '$moyen_livraison' WHERE id_commande = '$id_commande'";
+       $sql = "UPDATE commandes SET  id_utilisateur='$id_utilisateur', date_commande= '$date_commande', moyen_livraison = '$moyen_livraison' WHERE id_commande = '$id_commande'";
 
         if ($conn->query($sql) === TRUE) {
             echo "Les informations du commande ont été mises à jour avec succès.";
@@ -49,8 +49,8 @@ if (isset($_GET['id_commande'])) {
                
                </form>
                     <form method="post" action="modifier.php?id_commande=<?php echo $id_commande; ?>">
-                    <label for="id_client">Id client :</label><br>
-                    <input type="text" name="id_client" value="<?php echo $row['id_client']; ?>" required><br>
+                    <label for="id_utilisateur">Id utilisateur :</label><br>
+                    <input type="text" name="id_utilisateur" value="<?php echo $row['id_utilisateur']; ?>" required><br>
                     <label for="date_commande">Date de commandes</label><br>
                     <input type="date" name="date_commande" value="<?php echo $row['date_commande']; ?>" required><br>
                     <label for="moyen_livraison">moyen de livraison</label><br>
