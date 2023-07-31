@@ -25,12 +25,12 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "<table border=1>";
-    echo "<tr><th>ID</th><th>Date commande</th><th>Id client</th><th>Moyen de livraison</th><th>Modifier</th><th>supprimer</th></tr>";
+    echo "<tr><th>ID</th><th>Date commande</th><th>Id utilisateur</th><th>Moyen de livraison</th><th>Modifier</th><th>supprimer</th></tr>";
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>".$row['id_commande']."</td>";
         echo "<td>" . $row['date_commande'] . "</td>";
-        echo "<td>" . $row['id_client'] . "</td>";
+        echo "<td>" . $row['id_utilisateur'] . "</td>";
         echo "<td>" . $row['moyen_livraison'] . "</td>";
       ;
         echo "<td><a href='modifier.php?id_commande=".$row['id_commande']."'>Modifier</a></td>";
