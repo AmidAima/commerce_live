@@ -1,10 +1,10 @@
 <?php
-// Recherche de médicaments
+// Recherche de produits
 if (isset($_POST['recherche'])) {
     $search_term = $_POST['recherche'];
  
     include("../connexion.php");
-    // Requête de recherche des médicaments correspondants
+    // Requête de recherche des produits correspondants
     $sql = "SELECT * FROM produits WHERE nom_produit LIKE '%$search_term%' OR designation LIKE '%$search_term%'";
     $result = $conn->query($sql);
 
