@@ -10,16 +10,17 @@
 <body>
 <h2>Ajouter des commandes</h2>
   <form action="insert.php" method="POST">
-    <label for="id_client">Id client :</label><br>
-    <input type="text" name="id_client" id="id_client" required><br>
+    <label for="id_utilisateur">Id client :</label><br>
+    <input type="text" name="id_utilisateur" id="id_utilisateur" required><br>
 
     <label for="date_commande">Date de commandes</label><br>
     <input type="date" name="date_commande" id="date_commande" required><br>
  
     <label for="moyen_livraison">moyen de livraison</label><br>
     <select id="moyen_livraison" name="moyen_livraison" required>
-				<option value="locale">Locale</option>
-				<option value="domicile">A domicile</option>
+	                        <option value="DHL">DHL</option>
+				<option value="Post">Post</option>
+				<option value="Express">Express</option>
 				
     </select>
 
