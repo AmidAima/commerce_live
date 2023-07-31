@@ -42,9 +42,9 @@ CREATE TABLE IF NOT EXISTS `commandes` (
 --
 
 INSERT INTO `commandes` (`id_commande`, `id_client`, `date_commande`, `moyen_livraison`) VALUES
-(1, 2, '2023-07-21', 'domicile'),
-(2, 3, '2023-07-11', 'locale'),
-(3, 5, '2023-07-18', 'locale');
+(1, 2, '2023-07-21', 'DHL'),
+(2, 3, '2023-07-11', 'POST'),
+(3, 5, '2023-07-18', 'Express');
 
 -- --------------------------------------------------------
 
