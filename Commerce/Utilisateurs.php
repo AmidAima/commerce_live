@@ -43,16 +43,16 @@
     <h3>Qu'est ce que vous voulez ici?</h3 >
     <ol>
       
-   <li><p>veux tu voir tous les produits electroniques?<a href="./produits/afichage.php"> oui</a></p></li>
-   <li><p>Veux tu voir tous les fournisseurs des notre produits electroniques?<a href="./fournisseurs/affichage.php"> oui</a></p></li>
-   <li><p>veux tu afficher les factures?<a href="./factures/affichage.php"> oui</a></p></li>
-   <li><p>veux tu voir tous les  commandes des clients?<a href="./commandes/affichage.php"> oui</a></p></li>
+   <li><p>veux tu voir tous les produits electroniques?<a href="./produits/afichage.php"> tout est ici</a></p></li>
+   <li><p>Veux tu voir tous les fournisseurs des notre produits electroniques?<a href="./fournisseurs/affichage.php"> Clique ici</a></p></li>
+   <li><p>veux tu afficher les factures?<a href="./factures/affichage.php"> Clique ici</a></p></li>
+   <li><p>veux tu voir tous les  commandes des clients?<a href="./commandes/affichage.php"> Clique ici</a></p></li>
    
   </ol>
   <ul>
     <li><h4>Cette information peut satisfaire votre besoin ?</h4></li>
   </ul>
   </aside>
-  <!-- Reste du code... -->
+  
 </body>
 </html>
