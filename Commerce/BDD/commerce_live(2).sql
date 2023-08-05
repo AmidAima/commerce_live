@@ -169,7 +169,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
 --
 
 INSERT INTO `utilisateurs` (`id_utilisateur`, `nom_utilisateur`, `email`, `mot_de_passe`, `role_utilisateur`) VALUES
-(1, 'AHMED', 'moindjieamid@gmail.com', 'Amid123', 'Enqueteur'),
+(1, 'AHMED', 'moindjieamid@gmail.com', 'Amid123', 'Administrateur'),
 (2, 'MOHAMED', 'mohamedali@gmail.com', 'Ali1011', 'Client'),
 (3, 'DERA', 'derayves@gmail.com', 'Dyves45', 'Client'),
 (4, 'new', 'andry7@gmail.com', '12345', ''),
