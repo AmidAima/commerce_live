@@ -1,5 +1,6 @@
 body{
     background:url("image.webp");
+    background-repeat: no-repeat;
 }
 form {
 	background-color: #17a563;
@@ -115,7 +116,7 @@ a {
     width: 80%;
     border-collapse: collapse;
 	margin-top:5px;
-	margin-left: 100px;
+	margin-left: 10px;
   }
   
   th, td {
@@ -135,7 +136,7 @@ a {
     background-color: #bb1397;
   }
   tr:hover {
-    background-color: #a8d00a;
+    background-color: #1717b3;
   }
   p{
 	font-size: 20px;
