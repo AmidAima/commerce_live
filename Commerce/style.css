@@ -1,5 +1,7 @@
 body{
     background:url("image.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 form {
 	background-color: #17a563;
