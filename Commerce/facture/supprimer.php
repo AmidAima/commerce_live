@@ -5,10 +5,10 @@ include("../connexion.php");
 if (isset($_GET['id_facture'])) {
     $id_facture = $_GET['id_facture'];
 
-    $sql = "DELETE FROM facture WHERE id_facture= '$id_facture";
+    $sql = "DELETE FROM facture WHERE id_facture= '$id_facture'";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Le produit a été supprimé avec succès.";
+        echo "Le facture a été supprimé avec succès.";
     } else {
         echo "Erreur lors de la suppression du produit : " . $conn->error;
     }
@@ -20,12 +20,14 @@ $conn->close();
 
 include("../connexion.php");
 
-$sql = "SELECT * FROM facture";
+
+
+$sql = "SELECT * ,(prix_unitaire * quantite_acheter) AS montant_total FROM facture JOIN produits ON produits.id_produit=facture.id_produit ";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "<table border=1>";
-    echo "<tr><th>ID</th><th>Id commande</th><th>Id produit</th><th>Date facture</th><th>prix_unitaire</th><th>Montant total</th><th>Modifier</th><th>supprimer</th></tr>";
+    echo "<tr><th>ID</th><th>Id commande</th><th>Id produit</th><th>Date facture</th><th>prix_unitaire</th><th>Quantite</th><th>Somme</th><th>Modifier</th><th>supprimer</th></tr>";
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
         echo "<td>" . $row['id_facture'] . "</td>";
@@ -44,7 +46,7 @@ if ($result->num_rows > 0) {
    
 
 } else {
-    echo "Aucun facture enregistré dans la base de données.";
+    echo "Aucun listes des factures ont ete enregistré dans la base de données.";
 }
 
 $conn->close();
@@ -56,7 +58,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>facture</title>
+    <title>Commandes</title>
     <link rel="stylesheet" type="text/css" href="../home.css">
 </head>
 
